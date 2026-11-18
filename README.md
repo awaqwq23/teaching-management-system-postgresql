@@ -12,7 +12,7 @@
 | 构建工具 | Maven 3.9 或以上 |
 | 测试 | JUnit Jupiter 5.11.4，连接真实 PostgreSQL |
 
-本地验证使用 PostgreSQL 16.16、Java 27（`--release 17`）与 Maven 3.9.9；GitHub Actions 使用 Java 17 和 PostgreSQL 16。CI 是否通过以仓库实际运行记录为准。
+本地验证使用 PostgreSQL 16.16、Java 27（`--release 17`）与 Maven 3.9.9；GitHub Actions 使用 Java 17 和 PostgreSQL 16。2026-11-18 首次推送的 CI 已通过（提交 `f217b82`），后续提交状态以仓库页面为准。
 
 ## 创建数据库
 

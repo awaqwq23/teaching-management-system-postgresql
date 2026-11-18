@@ -1,0 +1,13 @@
+# GitHub Actions 运行记录
+
+仓库：awaqwq23/teaching-management-system-postgresql
+工作流：PostgreSQL and JDBC verification
+提交：f217b82e120983246d9305e7a791acb610d2b28b
+事件：push
+状态：completed
+结论：success
+创建时间：2026-11-18 05:06:10 UTC
+完成时间：2026-11-18 05:07:03 UTC
+运行页面：https://github.com/awaqwq23/teaching-management-system-postgresql/actions/runs/44241859593
+
+说明：该工作流使用 PostgreSQL 16 服务容器与 Temurin Java 17，执行建表、初始化、SQL 查询和 mvn -B -ntp verify。
