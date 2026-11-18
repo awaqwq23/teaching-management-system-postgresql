@@ -1,0 +1,15 @@
+                           version                           
+-------------------------------------------------------------
+ PostgreSQL 16.16, compiled by Visual C++ build 1944, 64-bit
+(1 row)
+
+    core_table    | count 
+------------------+-------
+ departments      |    10
+ students         |    20
+ teachers         |    10
+ courses          |    10
+ teaching_classes |    12
+ enrollments      |    24
+(6 rows)
+

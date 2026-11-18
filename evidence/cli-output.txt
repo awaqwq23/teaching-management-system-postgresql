@@ -1,0 +1,28 @@
+高校教学管理系统 / PostgreSQL
+1 添加学生  2 查询学生  3 修改学生  4 删除学生
+5 学生成绩单  6 教学班统计  7 选课  8 退课  9 录入成绩  0 退出
+
+选择> 学号> 成绩单记录数=2
+Transcript[studentNo=S2026001, studentName=学生01, classCode=CLS2026001, courseName=数据库系统, teacherName=教师01, grade=71.00]
+Transcript[studentNo=S2026001, studentName=学生01, classCode=CLS2026009, courseName=大学语文, teacherName=教师09, grade=91.00]
+高校教学管理系统 / PostgreSQL
+1 添加学生  2 查询学生  3 修改学生  4 删除学生
+5 学生成绩单  6 教学班统计  7 选课  8 退课  9 录入成绩  0 退出
+
+选择> ClassStatistics[classCode=CLS2026001, courseName=数据库系统, teacherName=教师01, capacity=30, enrolledCount=2, averageGrade=77.00]
+ClassStatistics[classCode=CLS2026002, courseName=Java程序设计, teacherName=教师02, capacity=30, enrolledCount=2, averageGrade=78.00]
+ClassStatistics[classCode=CLS2026003, courseName=高等数学, teacherName=教师03, capacity=30, enrolledCount=2, averageGrade=79.00]
+ClassStatistics[classCode=CLS2026004, courseName=大学物理, teacherName=教师04, capacity=30, enrolledCount=2, averageGrade=null]
+ClassStatistics[classCode=CLS2026005, courseName=大学英语, teacherName=教师05, capacity=30, enrolledCount=2, averageGrade=81.00]
+ClassStatistics[classCode=CLS2026006, courseName=微观经济学, teacherName=教师06, capacity=30, enrolledCount=2, averageGrade=82.00]
+ClassStatistics[classCode=CLS2026007, courseName=管理学原理, teacherName=教师07, capacity=30, enrolledCount=2, averageGrade=83.00]
+ClassStatistics[classCode=CLS2026008, courseName=法学导论, teacherName=教师08, capacity=30, enrolledCount=2, averageGrade=null]
+ClassStatistics[classCode=CLS2026009, courseName=大学语文, teacherName=教师09, capacity=30, enrolledCount=2, averageGrade=85.00]
+ClassStatistics[classCode=CLS2026010, courseName=生命科学导论, teacherName=教师10, capacity=30, enrolledCount=2, averageGrade=86.00]
+ClassStatistics[classCode=CLS2026011, courseName=数据库系统, teacherName=教师01, capacity=30, enrolledCount=2, averageGrade=87.00]
+ClassStatistics[classCode=CLS2026012, courseName=Java程序设计, teacherName=教师02, capacity=2, enrolledCount=2, averageGrade=null]
+高校教学管理系统 / PostgreSQL
+1 添加学生  2 查询学生  3 修改学生  4 删除学生
+5 学生成绩单  6 教学班统计  7 选课  8 退课  9 录入成绩  0 退出
+
+选择> 

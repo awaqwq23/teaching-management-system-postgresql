@@ -1,0 +1,54 @@
+name: PostgreSQL and JDBC verification
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_DB: course_management_test
+          POSTGRES_USER: course_test
+          POSTGRES_PASSWORD: ephemeral-ci-password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U course_test -d course_management_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      DB_URL: jdbc:postgresql://localhost:5432/course_management_test
+      DB_USER: course_test
+      DB_PASSWORD: ephemeral-ci-password
+      PGHOST: localhost
+      PGPORT: 5432
+      PGUSER: course_test
+      PGPASSWORD: ephemeral-ci-password
+      PGDATABASE: course_management_test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+      - name: Create database schema and fixtures
+        run: psql -X -v ON_ERROR_STOP=1 -f sql/create_tables.sql -f sql/insert_data.sql -f sql/verify.sql
+      - name: Run queries and verify Java application
+        run: |
+          psql -X -v ON_ERROR_STOP=1 -f sql/query.sql
+          mvn -B -ntp verify
+      - name: Preserve test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jdbc-test-reports
+          path: target/surefire-reports/

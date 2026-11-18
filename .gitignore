@@ -1,0 +1,8 @@
+target/
+.local/
+.work/
+.env
+*.log
+.idea/
+*.iml
+__pycache__/
